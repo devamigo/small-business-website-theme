@@ -56,7 +56,7 @@
 		
 			  
 		<?php
-		if( is_singular() ): ?>
+		if( is_singular() && function_exists( 'dvk_social_sharing' ) ): ?>
 		<!-- entry-social-sharing -->
 		<div class="entry-social-sharing top-separated">
 			<?php echo dvk_social_sharing(); ?>
