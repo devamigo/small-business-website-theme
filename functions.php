@@ -535,7 +535,7 @@ function da_header_cta() {
 	
 	if( $content ) {
 		echo 
-			'<div class="header-cta col-xs-6 show-sm">' . 
+			'<div class="header-cta col-xs-6">' . 
 				$content . 
 			'</div>';
 	}
