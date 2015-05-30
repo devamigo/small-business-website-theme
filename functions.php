@@ -45,7 +45,7 @@ function da_theme_assets() {
 	wp_enqueue_style( 'da-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'da-fonts', apply_filters(
 		'da_fonts',
-		'http://fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700|Domine:700'
+		'http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700|Domine:700'
 	) );
 	wp_enqueue_style( 'da-icons', 
 		'//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'
