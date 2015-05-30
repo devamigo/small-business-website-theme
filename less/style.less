@@ -109,29 +109,22 @@ blockquote, pre {
 	border-left: solid 4px @secondary-accent-color;
 	overflow: auto;
 	padding: @base-line-height;
-	padding-right: @base-line-height * 3;
 	position: relative;
-	
-	&:after {
-		font-family: @icon-font;
-		font-size: @h1-font-size;
-		color: @secondary-accent-color;
-		position: absolute;
-		right: @base-line-height;
-		top: @base-line-height;
-	}
 }
 
-blockquote:after {
-	content: '\f10e';
+blockquote cite {
+	color: @secondary-accent-color;
+	display: block;
+	margin-top: @base-line-height;
+	
+	&:before {
+		content: '\2014';
+		margin-right: 5px;
+	}
 }
 
 code, pre {
 	font-family: 'Courier New', 'Courier', Monospace;
-}
-
-pre:after {
-	content: '\f121';
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -260,14 +253,14 @@ hr {
 .alignleft {
 	display: inline;
 	float: left;
-	margin-right: @grid-gutter-width;
+	margin-right: @grid-gutter-width / 2;
 	max-width: 45%;
 }
 
 .alignright {
 	display: inline;
 	float: right;
-	margin-left: @grid-gutter-width;
+	margin-left: @grid-gutter-width / 2;
 	max-width: 45%;
 }
 

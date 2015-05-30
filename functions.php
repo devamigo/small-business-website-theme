@@ -212,7 +212,7 @@ blockquote:after, pre:after, .colored {
 .page-wrapper {
 	border-color: <?php echo $primary_accent_color ?>;
 }
-.site-title a {
+.site-title a, blockquote cite {
 	color: 	<?php echo $secondary_accent_color ?>;
 }
 .site-title a:hover, .entry-title a:hover {
