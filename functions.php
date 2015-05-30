@@ -20,7 +20,7 @@ function da_theme_setup() {
 	) );
 	
 	add_theme_support( 'custom-header', array(
-		'default-image'	=> get_template_directory_uri() . '/img/logo.jpg',
+		'default-image'	=> get_template_directory_uri() . '/img/logo.png',
 		'flex-width'	=> true,
 		'header-text'	=> false,
 		'height'		=> 104,		// pixels
