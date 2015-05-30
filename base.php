@@ -30,9 +30,9 @@
 					<?php bloginfo( 'description' ); ?>
 				</h2>
 			</div>
-		</div>
 		
-		<?php da_header_cta(); ?>
+			<?php da_header_cta(); ?>
+		</div>
 	</header>
 			
 	<!-- primary-nav -->
