@@ -60,7 +60,9 @@
 			</div>
 			
 			<?php
-			if( ! is_404() && ! is_page() && is_active_sidebar( 'da_sidebar_widgets' ) ): ?>
+			if( ! is_404() && 
+				! is_page_template() && 
+				is_active_sidebar( 'da_sidebar_widgets' ) ): ?>
 			<!-- sidebar-widgets -->
 			<div class="sidebar-widgets col-xs-12 col-md-4" role="complemetary">
 				<?php dynamic_sidebar( 'da_sidebar_widgets' ); ?>

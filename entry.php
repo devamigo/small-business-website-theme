@@ -36,7 +36,7 @@
 	<footer class="entry-footer">
 		<div class="entry-meta">
 			<span class="entry-author">
-				by <?php the_author_link(); ?>
+				Posted by <?php the_author_link(); ?>
 			</span>
 			
 			<?php
@@ -54,9 +54,11 @@
 				  content="<?php the_modified_time( 'Y-m-d' ); ?>">
 		</div>
 		
-			  
 		<?php
-		if( is_singular() && function_exists( 'dvk_social_sharing' ) ): ?>
+		if( is_singular() && 
+			function_exists( 'dvk_social_sharing' ) &&
+			! is_front_page() &&
+			! is_page_template( 'page_private.php' ) ): ?>
 		<!-- entry-social-sharing -->
 		<div class="entry-social-sharing top-separated">
 			<?php echo dvk_social_sharing(); ?>

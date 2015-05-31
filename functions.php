@@ -230,6 +230,18 @@ blockquote:after, pre:after, .colored {
 	echo "\n" . ob_get_clean() . "\n";
 }
 
+/**
+ *	Hide private page from search engines
+ *	----------------------------------------------------------------------------
+ */
+add_action( 'wp_head', 'da_private_page', 0 );
+
+function da_private_page() {
+	if( is_page_template( 'page_private.php' ) ) {
+		echo '<meta name="robots" content="noindex, follow">' . "\n";
+	}
+}
+
  
 /**
  *	Darken customizer color
@@ -305,8 +317,14 @@ function da_body_class( $classes ) {
 		$classes[] = 'page-' . get_queried_object_id();
 	}
 	
-	if( is_404() || is_page() || ! is_active_sidebar( 'da_sidebar_widgets' ) ) {
+	if( is_404() || 
+		is_page_template() || 
+		! is_active_sidebar( 'da_sidebar_widgets' ) ) {
 		$classes[] = 'no-sidebar';
+	}
+	
+	if( is_page_template( 'page_private.php' ) ) {
+		$classes[] = 'private';
 	}
 	
 	return $classes;
@@ -353,7 +371,7 @@ add_filter( 'show_admin_bar', '__return_false' );
  *	Cleanup <title> tag
  *	----------------------------------------------------------------------------
  */
-add_action( 'wp_title', 'da_title', 10, 2 );
+add_filter( 'wp_title', 'da_title', 10, 2 );
 
 function da_title( $title, $sep ) {
 	$title .= get_bloginfo( 'name' );

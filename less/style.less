@@ -638,6 +638,7 @@ body {
 
 .entry-meta {
 	.top-separated;
+	font-size: @small-font-size;
 	
 	.page-entry & {
 		.screen-reader-text;
@@ -655,12 +656,29 @@ body {
 //	Entry social sharing
 //	----------------------------------------------------------------------------
 .entry-social-sharing {
-	a {
-		border: 0;
-		color: @input-border-color;
-		
-		&:hover {
-			color: @text-color;
+	.dvk-social-sharing {
+		.ss-ask {
+			display: block;
+			font-weight: normal;
+			line-height: @base-line-height * 1.5;
+		}
+
+		a {
+			.btn;
+			background-color: white;
+			border: solid 1px @border-color;
+			color: @heading-color;
+			font-size: @small-font-size;
+			line-height: @base-line-height;
+			margin: 0;
+			margin-right: 10px;
+			text-shadow: 0 0 0 transparent;
+			
+			&:hover {
+				background-color: @block-bg-color;
+				border-color: @border-color;
+				color: @heading-color;
+			}
 		}
 	}
 }
