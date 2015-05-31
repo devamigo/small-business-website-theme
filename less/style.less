@@ -37,7 +37,7 @@
 @grid-columns:						12;
 @grid-gutter-width:					48px;
 
-@page-wrapper-width:				( @screen-md + @grid-gutter-width );
+@page-wrapper-width:				( @screen-md + @grid-gutter-width * 2 );
 @content-wrapper-width:				@screen-md;
 
 //
@@ -45,6 +45,7 @@
 //	----------------------------------------------------------------------------
 @block-bg-color:					#f6f6f6;
 @body-bg-color:						#e6e6e6;
+@footer-bg-color:					#333;
 
 @border-color:						#ddd;
 @input-border-color:				#bbb;
@@ -54,7 +55,8 @@
 @alt-primary-accent-color:			#a00918;
 @alt-secondary-accent-color:		#09a091;
 
-@text-color:						#333;
+@text-color:						#666;
+@heading-color:						#000;
 
 //
 //	Type variables
@@ -63,18 +65,18 @@
 @text-font:							'Open Sans', sans-serif;
 @heading-font:						'Domine', serif;
 
-@base-font-size:					16px;
-@base-line-height:					26px;
+@base-font-size:					18px;
+@base-line-height:					30px;
 
-@h1-font-size:						1.75em;
+@h1-font-size:						40px;
 @h1-line-height:					1.2;
-@h1-margin-bottom:					0.6571em;
+@h1-margin-bottom:					@base-line-height * 2 - @h1-font-size * @h1-line-height;
 
-@h2-font-size:						1.375em;
-@h3-font-size:						1.125em;
+@h2-font-size:						28px;
+@h3-font-size:						22px;
 
-@small-font-size:					0.8125em;
-@big-font-size:						1.125em;
+@small-font-size:					14px;
+@big-font-size:						20px;
 
 //
 //	Form variables
@@ -128,8 +130,8 @@ code, pre {
 }
 
 h1, h2, h3, h4, h5, h6 {
+	color: @heading-color;
 	font-family: @heading-font;
-	font-weight: bold;
 }
 
 h1 {
@@ -206,7 +208,6 @@ input[type=submit] {
 
 label {
 	font-size: @small-font-size;
-	font-style: italic;
 }
 
 textarea {
@@ -575,7 +576,7 @@ body {
 //	Site footer
 //	----------------------------------------------------------------------------
 .site-footer {
-	background-color: @text-color;
+	background-color: @footer-bg-color;
 	color: white;
 	padding: ( @base-line-height * 1.5 ) 0;
 	
@@ -605,7 +606,7 @@ body {
 .entry-title {
 	a {
 		border: 0;
-		color: @text-color;
+		color: @heading-color;
 		
 		&:hover {
 			color: @primary-accent-color;
@@ -731,6 +732,10 @@ body {
 }
 
 .comment-reply-title {
+	border-bottom: dotted 1px @border-color;
+	margin-bottom: @base-line-height / 2;
+	padding-bottom: @base-line-height / 2;
+
 	small {
 		float: right;
 		font-family: @text-font;
