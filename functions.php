@@ -23,7 +23,7 @@ function da_theme_setup() {
 		'default-image'	=> get_template_directory_uri() . '/img/logo.png',
 		'flex-width'	=> true,
 		'header-text'	=> false,
-		'height'		=> 104,		// pixels
+		'height'		=> 120,		// pixels
 	) );
 	
 	add_theme_support( 'html5', array(

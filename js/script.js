@@ -7,7 +7,7 @@
 		);
 		
 		// match height
-		$( '[class^="col"]' ).matchHeight();
+		$( '.row div[class^="col"]' ).matchHeight();
 		
 		// primary navigation toggle
 		$( '.primary-nav .toggle' ).click( function( e ) {
