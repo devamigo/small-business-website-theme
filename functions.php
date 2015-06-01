@@ -573,7 +573,7 @@ function da_featurebox_cta() {
 	if( $content ) {
 		echo 
 			'<div class="featurebox-cta">' . 
-				'<div class="content-wrapper wrapper-sm clr">' . 
+				'<div class="content-wrapper clr">' . 
 					$content . 
 				'</div>' . 
 			'</div>';
@@ -622,7 +622,7 @@ function da_footerbox_cta() {
 	if( $content ) {
 		echo 
 			'<div class="footerbox-cta">' . 
-				'<div class="content-wrapper wrapper-sm clr">' . 
+				'<div class="content-wrapper clr">' . 
 					$content . 
 				'</div>' . 
 			'</div>';
